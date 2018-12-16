@@ -18,7 +18,7 @@
 		F803207521C536040055A975 /* demoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803207421C536040055A975 /* demoAppTests.swift */; };
 		F803208021C536040055A975 /* demoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803207F21C536040055A975 /* demoAppUITests.swift */; };
 		F803209421C6739C0055A975 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803209321C6739C0055A975 /* Service.swift */; };
-		F803209621C674700055A975 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803209521C674700055A975 /* User.swift */; };
+		F803209621C674700055A975 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803209521C674700055A975 /* Post.swift */; };
 		F803209821C674BF0055A975 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803209721C674BF0055A975 /* UserViewModel.swift */; };
 		F803209C21C6753F0055A975 /* UserPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803209B21C6753F0055A975 /* UserPostViewController.swift */; };
 		F80320A121C6795A0055A975 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803209F21C6795A0055A975 /* UserCell.swift */; };
@@ -33,6 +33,7 @@
 		F80320B621C687A20055A975 /* TechnologiesUsedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320B521C687A20055A975 /* TechnologiesUsedViewController.swift */; };
 		F80320B921C6880C0055A975 /* TechCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320B721C6880C0055A975 /* TechCellTableViewCell.swift */; };
 		F80320BA21C6880C0055A975 /* TechCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80320B821C6880C0055A975 /* TechCellTableViewCell.xib */; };
+		F80320BC21C6EC660055A975 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320BB21C6EC660055A975 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +77,7 @@
 		F803207F21C536040055A975 /* demoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoAppUITests.swift; sourceTree = "<group>"; };
 		F803208121C536040055A975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F803209321C6739C0055A975 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		F803209521C674700055A975 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F803209521C674700055A975 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F803209721C674BF0055A975 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		F803209B21C6753F0055A975 /* UserPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostViewController.swift; sourceTree = "<group>"; };
 		F803209F21C6795A0055A975 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		F80320B521C687A20055A975 /* TechnologiesUsedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologiesUsedViewController.swift; sourceTree = "<group>"; };
 		F80320B721C6880C0055A975 /* TechCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechCellTableViewCell.swift; sourceTree = "<group>"; };
 		F80320B821C6880C0055A975 /* TechCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TechCellTableViewCell.xib; sourceTree = "<group>"; };
+		F80320BB21C6EC660055A975 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +215,8 @@
 		F803208F21C6733F0055A975 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F803209521C674700055A975 /* User.swift */,
+				F803209521C674700055A975 /* Post.swift */,
+				F80320BB21C6EC660055A975 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -487,7 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F803209621C674700055A975 /* User.swift in Sources */,
+				F803209621C674700055A975 /* Post.swift in Sources */,
 				F803206221C536020055A975 /* ViewController.swift in Sources */,
 				F80320A421C67DA20055A975 /* UserDetailViewController.swift in Sources */,
 				F80320AB21C681500055A975 /* FlickerCollectionViewController.swift in Sources */,
@@ -495,6 +498,7 @@
 				F80320B921C6880C0055A975 /* TechCellTableViewCell.swift in Sources */,
 				F803206021C536020055A975 /* AppDelegate.swift in Sources */,
 				F803209821C674BF0055A975 /* UserViewModel.swift in Sources */,
+				F80320BC21C6EC660055A975 /* User.swift in Sources */,
 				F803209421C6739C0055A975 /* Service.swift in Sources */,
 				F80320A721C67E920055A975 /* UserDetailCell.swift in Sources */,
 				F80320A121C6795A0055A975 /* UserCell.swift in Sources */,

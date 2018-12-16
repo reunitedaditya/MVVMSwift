@@ -9,14 +9,59 @@
 import Foundation
 import Moya
 
-class Service : NSObject {
+
+enum Service {
     
-  static let shared = Service()
+    case fetchPost
+}
+
+extension Service : TargetType {
     
-    
-    public enum FetchPost {
+    var baseURL: URL {
         
-        
+        return URL(string: "http://jsonplaceholder.typicode.com")!
     }
+    
+    var path: String {
+        
+        switch self {
+            
+        case .fetchPost :
+            
+           return "/posts"
+        }
+    }
+    
+    var method: Moya.Method {
+        
+        switch self {
+        case .fetchPost:
+            
+            return .get
+ 
+        }
+    }
+    
+    var sampleData: Data {
+        
+        return Data()
+    }
+    
+    var task: Moya.Task {
+        
+        switch self {
+            
+        case .fetchPost:
+            
+          return .requestPlain
+        }
+    }
+    
+    var headers: [String : String]? {
+    
+        return ["Content-Type" : "application/json"]
+    }
+    
+    
     
 }

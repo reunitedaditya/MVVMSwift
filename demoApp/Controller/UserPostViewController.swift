@@ -8,20 +8,52 @@
 
 import Foundation
 import UIKit
+import Moya
 
 class UserPostViewController : UITableViewController {
     
     let cellId = "postCell"
+    var userProvider = MoyaProvider<Service>()
+    var posts = [Post]()
+    var numberOfUsers = [String]()
+ 
     
     override func viewDidLoad() {
         
         setupNavBar()
         setupTableView()
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.featured, tag: 1)
+        
+        userProvider.request(.fetchPost, completion: { (result) in
+            
+            switch result {
+                
+            case .success(let response) :
+                
+                let post = try! JSONDecoder().decode([Post].self , from : response.data)
+                self.posts = post
+                
+                for post in self.posts {
+                    
+                    if !self.numberOfUsers.contains(String(post.userId)){
+                        
+                        self.numberOfUsers.append(String(post.userId))
+                    }
+                
+                }
+                
+                self.tableView.reloadData()
+                
+          
+            case.failure(let error) :
+                print(error)
+            }
+        })
+
     }
     
     
     fileprivate func setupNavBar() {
+        
         navigationItem.title = "Posts"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = .yellow
@@ -47,12 +79,15 @@ extension UserPostViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return numberOfUsers.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
+        cell.selectionStyle = .none
+        
+        cell.userLabel.text = "User \(numberOfUsers[indexPath.row])"
         
         return cell
     }
@@ -64,7 +99,19 @@ extension UserPostViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let CurrentuserId = numberOfUsers[indexPath.row]
+        var allPosts = [Post]()
+ 
+            for post in self.posts {
+                
+                if post.userId == Int(CurrentuserId) {
+                    
+                    allPosts.append(post)
+                }
+            }
+
         self.navigationController?.pushViewController(UserDetailViewController(), animated: true)
+       
     }
 }
 

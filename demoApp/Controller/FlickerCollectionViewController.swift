@@ -16,7 +16,7 @@ class FlickerCollectionViewController: UICollectionViewController {
        
         setupNavBar()
         setupCollectionView()
-         self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.downloads, tag: 2)
+
     }
     
     fileprivate func setupNavBar() {

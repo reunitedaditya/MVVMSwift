@@ -61,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let technologyTab : UIViewController = UINavigationController(rootViewController: TechnologiesUsedViewController())
         
          postTab.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.featured, tag: 1)
-         flickrTab.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.bookmarks, tag: 2)
+         flickrTab.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.mostRecent, tag: 2)
          technologyTab.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.more, tag: 3)
         
         let myTabs = NSArray(objects: postTab, flickrTab,technologyTab)
