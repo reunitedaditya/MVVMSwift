@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let flickrVC = FlickerCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+      //  let flickrVC = FlickerCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
         
-        window?.rootViewController = CustomNavigationController(rootViewController: flickrVC)
+        window?.rootViewController = CustomNavigationController(rootViewController: TechnologiesUsedViewController())
         return true
     }
 

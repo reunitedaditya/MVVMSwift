@@ -27,6 +27,9 @@
 		F80320AF21C683FA0055A975 /* FlickrCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320AD21C683FA0055A975 /* FlickrCollectionViewCell.swift */; };
 		F80320B021C683FA0055A975 /* FlickrCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80320AE21C683FA0055A975 /* FlickrCollectionViewCell.xib */; };
 		F80320B321C685E40055A975 /* FlickerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320B121C685E40055A975 /* FlickerDetailViewController.swift */; };
+		F80320B621C687A20055A975 /* TechnologiesUsedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320B521C687A20055A975 /* TechnologiesUsedViewController.swift */; };
+		F80320B921C6880C0055A975 /* TechCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320B721C6880C0055A975 /* TechCellTableViewCell.swift */; };
+		F80320BA21C6880C0055A975 /* TechCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80320B821C6880C0055A975 /* TechCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		F80320AD21C683FA0055A975 /* FlickrCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrCollectionViewCell.swift; sourceTree = "<group>"; };
 		F80320AE21C683FA0055A975 /* FlickrCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlickrCollectionViewCell.xib; sourceTree = "<group>"; };
 		F80320B121C685E40055A975 /* FlickerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerDetailViewController.swift; sourceTree = "<group>"; };
+		F80320B521C687A20055A975 /* TechnologiesUsedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologiesUsedViewController.swift; sourceTree = "<group>"; };
+		F80320B721C6880C0055A975 /* TechCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechCellTableViewCell.swift; sourceTree = "<group>"; };
+		F80320B821C6880C0055A975 /* TechCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TechCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,8 @@
 				F80320A621C67E920055A975 /* UserDetailCell.xib */,
 				F80320AD21C683FA0055A975 /* FlickrCollectionViewCell.swift */,
 				F80320AE21C683FA0055A975 /* FlickrCollectionViewCell.xib */,
+				F80320B721C6880C0055A975 /* TechCellTableViewCell.swift */,
+				F80320B821C6880C0055A975 /* TechCellTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 				F80320A321C67DA20055A975 /* UserDetailViewController.swift */,
 				F80320A921C681500055A975 /* FlickerCollectionViewController.swift */,
 				F80320B121C685E40055A975 /* FlickerDetailViewController.swift */,
+				F80320B521C687A20055A975 /* TechnologiesUsedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +319,7 @@
 			files = (
 				F80320A221C6795A0055A975 /* UserCell.xib in Resources */,
 				F803206A21C536040055A975 /* LaunchScreen.storyboard in Resources */,
+				F80320BA21C6880C0055A975 /* TechCellTableViewCell.xib in Resources */,
 				F803206721C536040055A975 /* Assets.xcassets in Resources */,
 				F80320A821C67E920055A975 /* UserDetailCell.xib in Resources */,
 				F803206521C536020055A975 /* Main.storyboard in Resources */,
@@ -343,11 +353,13 @@
 				F80320A421C67DA20055A975 /* UserDetailViewController.swift in Sources */,
 				F80320AB21C681500055A975 /* FlickerCollectionViewController.swift in Sources */,
 				F803209C21C6753F0055A975 /* UserPostViewController.swift in Sources */,
+				F80320B921C6880C0055A975 /* TechCellTableViewCell.swift in Sources */,
 				F803206021C536020055A975 /* AppDelegate.swift in Sources */,
 				F803209821C674BF0055A975 /* UserViewModel.swift in Sources */,
 				F803209421C6739C0055A975 /* Service.swift in Sources */,
 				F80320A721C67E920055A975 /* UserDetailCell.swift in Sources */,
 				F80320A121C6795A0055A975 /* UserCell.swift in Sources */,
+				F80320B621C687A20055A975 /* TechnologiesUsedViewController.swift in Sources */,
 				F80320B321C685E40055A975 /* FlickerDetailViewController.swift in Sources */,
 				F80320AF21C683FA0055A975 /* FlickrCollectionViewCell.swift in Sources */,
 			);

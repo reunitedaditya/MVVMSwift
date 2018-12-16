@@ -1,5 +1,5 @@
 //
-//  UserPostViewController.swift
+//  TechnologiesUsedViewController.swift
 //  demoApp
 //
 //  Created by Adtiya Yadav on 16/12/18.
@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class UserPostViewController : UITableViewController {
+class TechnologiesUsedViewController: UITableViewController {
     
-    let cellId = "postCell"
+    
+    let cellId = "techCell"
     
     override func viewDidLoad() {
         
@@ -21,7 +22,7 @@ class UserPostViewController : UITableViewController {
     
     
     fileprivate func setupNavBar() {
-        navigationItem.title = "Posts"
+        navigationItem.title = "Technologies"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = .yellow
         navigationController?.navigationBar.isTranslucent = false
@@ -31,8 +32,8 @@ class UserPostViewController : UITableViewController {
     
     
     fileprivate func setupTableView() {
-        tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
-        tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: cellId)
+        tableView.register(TechCellTableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(UINib(nibName: "TechCellTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         tableView.separatorColor = .mainTextBlue
         tableView.backgroundColor = UIColor.rgb(r: 12, g: 47, b: 57)
@@ -40,9 +41,11 @@ class UserPostViewController : UITableViewController {
         tableView.estimatedRowHeight = 50
         tableView.tableFooterView = UIView()
     }
+
 }
 
-extension UserPostViewController {
+
+extension TechnologiesUsedViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -58,28 +61,7 @@ extension UserPostViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 70
+        return 50
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.navigationController?.pushViewController(UserDetailViewController(), animated: true)
-    }
-}
 
-
-class CustomNavigationController: UINavigationController {
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-}
-
-extension UIColor {
-    
-    static let mainTextBlue = UIColor.rgb(r: 7, g: 71, b: 89)
-    static let highlightColor = UIColor.rgb(r: 50, g: 199, b: 242)
-    
-    static func rgb(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor {
-        return UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1)
-    }
 }
