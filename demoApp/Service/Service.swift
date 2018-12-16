@@ -7,9 +7,16 @@
 //
 
 import Foundation
+import Moya
 
 class Service : NSObject {
     
   static let shared = Service()
+    
+    
+    public enum FetchPost {
+        
+        
+    }
     
 }

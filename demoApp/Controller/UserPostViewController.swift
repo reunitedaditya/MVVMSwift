@@ -17,6 +17,7 @@ class UserPostViewController : UITableViewController {
         
         setupNavBar()
         setupTableView()
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.featured, tag: 1)
     }
     
     

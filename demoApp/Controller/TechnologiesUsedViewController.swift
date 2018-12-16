@@ -18,6 +18,7 @@ class TechnologiesUsedViewController: UITableViewController {
         
         setupNavBar()
         setupTableView()
+         self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.downloads, tag: 3)
     }
     
     

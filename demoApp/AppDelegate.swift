@@ -12,14 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private var myTabBarController: UITabBarController!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-      //  let flickrVC = FlickerCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        instantiateTabBar()
         
-        window?.rootViewController = CustomNavigationController(rootViewController: TechnologiesUsedViewController())
+  
         return true
     }
 
@@ -44,7 +45,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func instantiateTabBar(){
+        
+        let flickrVC = FlickerCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+      
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        
+        let postTab: UIViewController = UINavigationController(rootViewController: UserPostViewController())
+        
+        let flickrTab: UIViewController = UINavigationController(rootViewController: flickrVC)
+        
+        let technologyTab : UIViewController = UINavigationController(rootViewController: TechnologiesUsedViewController())
+        
+         postTab.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.featured, tag: 1)
+         flickrTab.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.bookmarks, tag: 2)
+         technologyTab.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarItem.SystemItem.more, tag: 3)
+        
+        let myTabs = NSArray(objects: postTab, flickrTab,technologyTab)
+        
 
+        myTabBarController = UITabBarController()
+        
+     
+        myTabBarController?.setViewControllers(myTabs as? [UIViewController], animated: false)
+        
+    
+        self.window!.rootViewController = myTabBarController
+        
+        self.window!.makeKeyAndVisible()
+    }
+    
 
 }
 
