@@ -20,11 +20,5 @@ class FlickrCollectionViewCell: UICollectionViewCell {
             self.imageView.sd_setImage(with: URL(string: flickrPhotoViewModel.url), placeholderImage: UIImage(named: "placeholder.png"))
         }
     }
-    
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
 }

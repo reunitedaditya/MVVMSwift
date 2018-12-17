@@ -116,6 +116,7 @@ extension UserPostViewController {
 
         let controller = UserDetailViewController()
         controller.posts = allPosts
+        controller.userName = "User \(numberOfUsers[indexPath.row])"
 
         self.navigationController?.pushViewController(controller, animated: true)
        
