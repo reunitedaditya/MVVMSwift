@@ -12,6 +12,8 @@ class UserCell: UITableViewCell {
     
     @IBOutlet weak var userLabel: UILabel!
     
+    //ViewModel Property
+    
     var postViewModel : PostsViewModel! {
     
         didSet {

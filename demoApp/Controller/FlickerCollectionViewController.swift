@@ -22,11 +22,11 @@ class FlickerCollectionViewController: UICollectionViewController {
         setupNavBar()
         setupCollectionView()
         fetchData()
-        
-       
+
     }
     
     fileprivate func setupNavBar() {
+        
         navigationItem.title = "Flickr"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isTranslucent = false
@@ -39,6 +39,8 @@ class FlickerCollectionViewController: UICollectionViewController {
         collectionView.register(FlickrCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.register(UINib(nibName: "FlickrCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
+    
+    //Fetch photo data from service
     
     fileprivate func fetchData(){
         
@@ -70,6 +72,8 @@ class FlickerCollectionViewController: UICollectionViewController {
     }
     
 }
+
+//CollectionView Delegate and Datasource Methods
 
 extension FlickerCollectionViewController : UICollectionViewDelegateFlowLayout {
     

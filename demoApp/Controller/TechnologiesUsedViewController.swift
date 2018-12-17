@@ -14,7 +14,7 @@ class TechnologiesUsedViewController: UITableViewController {
     
     let cellId = "techCell"
     
-    let technologies = ["Moya" , "SDWebImage" , "Github" , "MVVM"]
+    let technologies = ["Moya" , "SDWebImage" , "Github" , "MVVM" , "Typecode.io"] // Static technologies
     
     override func viewDidLoad() {
         
@@ -46,6 +46,7 @@ class TechnologiesUsedViewController: UITableViewController {
 
 }
 
+//TableView Delegate functions
 
 extension TechnologiesUsedViewController {
     

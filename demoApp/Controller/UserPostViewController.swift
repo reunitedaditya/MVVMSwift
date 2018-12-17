@@ -27,6 +27,8 @@ class UserPostViewController : UITableViewController {
     }
     
     
+    //Setup the navigation bar
+    
     fileprivate func setupNavBar() {
         
         navigationItem.title = "Posts"
@@ -36,6 +38,8 @@ class UserPostViewController : UITableViewController {
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
+    
+    //Setup the tableView
     
     fileprivate func setupTableView() {
         tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
@@ -47,6 +51,9 @@ class UserPostViewController : UITableViewController {
         tableView.estimatedRowHeight = 50
         tableView.tableFooterView = UIView()
     }
+    
+    
+    // Fetch post data from the Service
     
     fileprivate func fetchData(){
         
@@ -77,6 +84,8 @@ class UserPostViewController : UITableViewController {
         })
     }
 }
+
+//TableView Delegate and Datasource Methods
 
 extension UserPostViewController {
     
@@ -123,12 +132,15 @@ extension UserPostViewController {
     }
 }
 
+//Navbar setting
 
 class CustomNavigationController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 }
+
+//UIColor extenstion to except rgb  values
 
 extension UIColor {
     

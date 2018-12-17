@@ -8,6 +8,9 @@
 
 import Foundation
 
+
+//Generated using typecode.io
+
 struct FlickrPhoto: Codable {
     let photos: Photos
     let stat: String

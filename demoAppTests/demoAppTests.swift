@@ -31,6 +31,8 @@ class demoAppTests: XCTestCase {
         }
     }
     
+    //Basic test case to test postViewModel
+    
     func testPostViewModel(){
 
         let post = Post(title: "Hello", userId: 3, id: 3, body: "World")

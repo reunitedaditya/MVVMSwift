@@ -22,6 +22,8 @@ class UserDetailViewController : UITableViewController {
         self.title = userName
     }
     
+    //Setup tableView Controller
+    
     fileprivate func setupTableView() {
         
         tableView.register(UserDetailCell.self, forCellReuseIdentifier: cellId)
@@ -41,6 +43,8 @@ class UserDetailViewController : UITableViewController {
     }
 
 }
+
+//TableView delegate and datasource methods
 
 extension UserDetailViewController {
     
