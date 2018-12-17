@@ -8,7 +8,6 @@
 
 import UIKit
 import Moya
-import SDWebImage
 
 private let reuseIdentifier = "flickrCell"
 
@@ -16,7 +15,7 @@ class FlickerCollectionViewController: UICollectionViewController {
     
     var userProvider = MoyaProvider<Service>()
     var photos = [FlickrPhoto]()
-    var photUrl = [String]()
+    var photoViewModel = [FlickrPhotoViewModel]()
     
     override func viewDidLoad() {
        
@@ -24,6 +23,7 @@ class FlickerCollectionViewController: UICollectionViewController {
         setupCollectionView()
         fetchData()
         
+       
     }
     
     fileprivate func setupNavBar() {
@@ -49,7 +49,7 @@ class FlickerCollectionViewController: UICollectionViewController {
             case .success(let response) :
                 
                 let flickrPhoto = try! JSONDecoder().decode(FlickrPhoto.self, from: response.data)
-                
+            
                 self.photos = [flickrPhoto]
                 
                 let element = self.photos[0]
@@ -57,8 +57,8 @@ class FlickerCollectionViewController: UICollectionViewController {
                 for item in element.photos.photo {
                     
                     let url = "https://farm\(item.farm).staticflickr.com/\(item.server)/\(item.id)_\(item.secret).jpg"
-                    
-                    self.photUrl.append(url)
+
+                    self.photoViewModel.append(FlickrPhotoViewModel(photoUrl: url))
                 }
                 
                 self.collectionView.reloadData()
@@ -75,16 +75,17 @@ extension FlickerCollectionViewController : UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return photUrl.count
+        return photoViewModel.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let item = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FlickrCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FlickrCollectionViewCell
       
-        item.imageView.sd_setImage(with: URL(string: photUrl[indexPath.row]), placeholderImage: UIImage(named: "placeholder.png"))
+        let photoViewModel = self.photoViewModel[indexPath.row]
+        cell.flickrPhotoViewModel = photoViewModel
         
-        return item
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -114,8 +115,8 @@ extension FlickerCollectionViewController : UICollectionViewDelegateFlowLayout {
         
         
         let controller = FlickerDetailViewController()
-        controller.imageURL = photUrl[indexPath.row]
-        
+        controller.imageURL = self.photoViewModel[indexPath.row].url
+
        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

@@ -36,6 +36,7 @@
 		F80320BC21C6EC660055A975 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320BB21C6EC660055A975 /* User.swift */; };
 		F80320BE21C6F36A0055A975 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320BD21C6F36A0055A975 /* FlickrPhoto.swift */; };
 		F80320C021C7BBA20055A975 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320BF21C7BBA20055A975 /* PostsViewModel.swift */; };
+		F80320C221C7CC9D0055A975 /* FlickrPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320C121C7CC9D0055A975 /* FlickrPhotoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		F80320BB21C6EC660055A975 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F80320BD21C6F36A0055A975 /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
 		F80320BF21C7BBA20055A975 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		F80320C121C7CC9D0055A975 /* FlickrPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			children = (
 				F803209721C674BF0055A975 /* UserViewModel.swift */,
 				F80320BF21C7BBA20055A975 /* PostsViewModel.swift */,
+				F80320C121C7CC9D0055A975 /* FlickrPhotoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				F80320AB21C681500055A975 /* FlickerCollectionViewController.swift in Sources */,
 				F803209C21C6753F0055A975 /* UserPostViewController.swift in Sources */,
 				F80320B921C6880C0055A975 /* TechCellTableViewCell.swift in Sources */,
+				F80320C221C7CC9D0055A975 /* FlickrPhotoViewModel.swift in Sources */,
 				F803206021C536020055A975 /* AppDelegate.swift in Sources */,
 				F803209821C674BF0055A975 /* UserViewModel.swift in Sources */,
 				F80320BC21C6EC660055A975 /* User.swift in Sources */,
