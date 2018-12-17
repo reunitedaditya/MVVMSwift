@@ -14,10 +14,10 @@ class FlickrCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     var flickrPhotoViewModel : FlickrPhotoViewModel! {
-        
+    
         didSet {
-            
-            self.imageView.sd_setImage(with: URL(string: flickrPhotoViewModel.url), placeholderImage: nil)
+        
+            self.imageView.sd_setImage(with: URL(string: flickrPhotoViewModel.url), placeholderImage: UIImage(named: "White"))
         }
     }
 
