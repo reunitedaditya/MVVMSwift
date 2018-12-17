@@ -30,5 +30,15 @@ class demoAppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testPostViewModel(){
+
+        let post = Post(title: "Hello", userId: 3, id: 3, body: "World")
+        let postViewModel = PostsViewModel(post: post)
+        
+        XCTAssertEqual(post.title, postViewModel.title)
+        XCTAssertEqual(post.body, postViewModel.body)
+
+    }
 
 }

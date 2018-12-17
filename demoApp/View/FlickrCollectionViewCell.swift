@@ -17,7 +17,7 @@ class FlickrCollectionViewCell: UICollectionViewCell {
         
         didSet {
             
-            self.imageView.sd_setImage(with: URL(string: flickrPhotoViewModel.url), placeholderImage: UIImage(named: "placeholder.png"))
+            self.imageView.sd_setImage(with: URL(string: flickrPhotoViewModel.url), placeholderImage: nil)
         }
     }
 

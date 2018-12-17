@@ -9,6 +9,9 @@
 import UIKit
 
 class TechCellTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var techText: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
