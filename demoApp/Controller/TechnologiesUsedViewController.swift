@@ -25,7 +25,6 @@ class TechnologiesUsedViewController: UITableViewController {
     fileprivate func setupNavBar() {
         navigationItem.title = "Technologies"
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = .yellow
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor.rgb(r: 50, g: 199, b: 242)
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]

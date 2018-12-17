@@ -10,5 +10,7 @@ import Foundation
 
 struct UserViewModel {
     
+    let name : String
+    
     
 }

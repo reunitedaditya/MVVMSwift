@@ -9,6 +9,21 @@
 import UIKit
 
 class UserDetailCell: UITableViewCell {
+    
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var subtitle: UILabel!
+    
+    
+    var postViewModel : PostsViewModel! {
+        
+        didSet {
+          
+            self.title.text = postViewModel.title
+            self.subtitle.text = postViewModel.body
+            self.selectionStyle = .none
+            
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -11,7 +11,8 @@ import UIKit
 
 class UserDetailViewController : UITableViewController {
     
-      let cellId = "detailCell"
+       let cellId = "detailCell"
+       var posts : [PostsViewModel]!
     
     override func viewDidLoad() {
         
@@ -24,9 +25,13 @@ class UserDetailViewController : UITableViewController {
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         tableView.separatorColor = .mainTextBlue
         tableView.backgroundColor = UIColor.rgb(r: 12, g: 47, b: 57)
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 50
         tableView.tableFooterView = UIView()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        tableView.reloadData()
     }
 
 }
@@ -35,18 +40,18 @@ extension UserDetailViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return posts.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserDetailCell
         
+        let post = posts[indexPath.row]
+        
+        cell.postViewModel = post
+        
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 140
-    }
+
 }

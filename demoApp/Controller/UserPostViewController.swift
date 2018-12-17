@@ -14,7 +14,7 @@ class UserPostViewController : UITableViewController {
     
     let cellId = "postCell"
     var userProvider = MoyaProvider<Service>()
-    var posts = [Post]()
+    var postViewModels = [PostsViewModel]()
     var numberOfUsers = [String]()
  
     
@@ -22,32 +22,7 @@ class UserPostViewController : UITableViewController {
         
         setupNavBar()
         setupTableView()
-        
-        userProvider.request(.fetchPost, completion: { (result) in
-  
-            switch result {
-                
-            case .success(let response) :
-  
-                let post = try! JSONDecoder().decode([Post].self , from : response.data)
-                self.posts = post
-                
-                for post in self.posts {
-                    
-                    if !self.numberOfUsers.contains(String(post.userId)){
-                        
-                        self.numberOfUsers.append(String(post.userId))
-                    }
-                
-                }
-                
-                self.tableView.reloadData()
-                
-          
-            case.failure(let error) :
-                print(error)
-            }
-        })
+        fetchData()
 
     }
     
@@ -56,7 +31,6 @@ class UserPostViewController : UITableViewController {
         
         navigationItem.title = "Posts"
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = .yellow
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor.rgb(r: 50, g: 199, b: 242)
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
@@ -73,6 +47,35 @@ class UserPostViewController : UITableViewController {
         tableView.estimatedRowHeight = 50
         tableView.tableFooterView = UIView()
     }
+    
+    fileprivate func fetchData(){
+        
+        userProvider.request(.fetchPost, completion: { (result) in
+            
+            switch result {
+                
+            case .success(let response) :
+                
+                let post = try! JSONDecoder().decode([Post].self , from : response.data)
+                self.postViewModels = post.map({return PostsViewModel(post: $0)})
+                
+                for post in self.postViewModels {
+                    
+                    if !self.numberOfUsers.contains(String(post.userId)){
+                        
+                        self.numberOfUsers.append(String(post.userId))
+                    }
+                    
+                }
+                
+                self.tableView.reloadData()
+                
+                
+            case.failure(let error) :
+                print(error)
+            }
+        })
+    }
 }
 
 extension UserPostViewController {
@@ -86,9 +89,10 @@ extension UserPostViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
         cell.selectionStyle = .none
-        
         cell.userLabel.text = "User \(numberOfUsers[indexPath.row])"
-        
+        let post = postViewModels[indexPath.row]
+        cell.postViewModel = post
+
         return cell
     }
     
@@ -100,9 +104,9 @@ extension UserPostViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let CurrentuserId = numberOfUsers[indexPath.row]
-        var allPosts = [Post]()
+        var allPosts = [PostsViewModel]()
  
-            for post in self.posts {
+            for post in self.postViewModels {
                 
                 if post.userId == Int(CurrentuserId) {
                     
@@ -110,7 +114,10 @@ extension UserPostViewController {
                 }
             }
 
-        self.navigationController?.pushViewController(UserDetailViewController(), animated: true)
+        let controller = UserDetailViewController()
+        controller.posts = allPosts
+
+        self.navigationController?.pushViewController(controller, animated: true)
        
     }
 }

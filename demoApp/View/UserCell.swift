@@ -12,12 +12,20 @@ class UserCell: UITableViewCell {
     
     @IBOutlet weak var userLabel: UILabel!
     
+    var postViewModel : PostsViewModel! {
+    
+        didSet {
+            
+            self.accessoryType = postViewModel.accessoryType
+        }
+    }
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.accessoryType = .disclosureIndicator
-        // Initialization code
+       
+      
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

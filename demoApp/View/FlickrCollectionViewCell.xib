@@ -17,9 +17,23 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="198" height="149"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dms-wZ-Ega">
+                        <rect key="frame" x="0.0" y="0.0" width="198" height="149"/>
+                    </imageView>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="dms-wZ-Ega" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IW4-Kq-DTi"/>
+                <constraint firstAttribute="trailing" secondItem="dms-wZ-Ega" secondAttribute="trailing" id="MaY-bZ-J8k"/>
+                <constraint firstItem="dms-wZ-Ega" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ybh-ic-2yh"/>
+                <constraint firstAttribute="bottom" secondItem="dms-wZ-Ega" secondAttribute="bottom" id="h17-2M-PVV"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="198" height="149"/>
+            <connections>
+                <outlet property="imageView" destination="dms-wZ-Ega" id="wWm-Zd-so4"/>
+            </connections>
             <point key="canvasLocation" x="114" y="134"/>
         </collectionViewCell>
     </objects>

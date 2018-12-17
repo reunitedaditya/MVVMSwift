@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FlickerDetailViewController: UIViewController {
+    
+    var imageURL : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,9 @@ class FlickerDetailViewController: UIViewController {
     fileprivate func setup(){
         
         let detailImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-        detailImageView.backgroundColor = .orange
+        
+        
+        detailImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.png"))
         
        self.view = detailImageView
     }

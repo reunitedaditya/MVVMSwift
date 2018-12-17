@@ -11,38 +11,45 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="140" id="KGk-i7-Jjw" customClass="UserDetailCell" customModule="demoApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="149" id="KGk-i7-Jjw" customClass="UserDetailCell" customModule="demoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="139.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="148.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nesciunt quas odio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yes-Rw-Moa">
-                        <rect key="frame" x="9" y="11" width="286" height="23"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGy-RH-fSN">
+                        <rect key="frame" x="5" y="60" width="310" height="83.5"/>
+                        <string key="text">repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque</string>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGy-RH-fSN">
-                        <rect key="frame" x="9" y="42" width="286" height="90"/>
-                        <string key="text">repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nesciunt quas odionesciunt quas odionesciunt quas odio" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yes-Rw-Moa">
+                        <rect key="frame" x="5" y="5" width="310" height="50"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Yes-Rw-Moa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="0zK-sw-FpE"/>
-                    <constraint firstItem="FGy-RH-fSN" firstAttribute="trailing" secondItem="Yes-Rw-Moa" secondAttribute="trailing" id="5S9-ub-Mf8"/>
-                    <constraint firstAttribute="trailing" secondItem="Yes-Rw-Moa" secondAttribute="trailing" constant="25" id="79c-fe-4J9"/>
-                    <constraint firstItem="FGy-RH-fSN" firstAttribute="leading" secondItem="Yes-Rw-Moa" secondAttribute="leading" id="L9N-z7-KLP"/>
-                    <constraint firstItem="Yes-Rw-Moa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="Oa5-tU-bM0"/>
-                    <constraint firstItem="FGy-RH-fSN" firstAttribute="top" secondItem="Yes-Rw-Moa" secondAttribute="bottom" constant="8" id="yeV-GF-K4h"/>
+                    <constraint firstItem="Yes-Rw-Moa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="2eF-aO-7Jz"/>
+                    <constraint firstItem="FGy-RH-fSN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="3Rr-U0-C3I"/>
+                    <constraint firstAttribute="trailing" secondItem="FGy-RH-fSN" secondAttribute="trailing" constant="5" id="IMe-k2-5Sm"/>
+                    <constraint firstItem="FGy-RH-fSN" firstAttribute="top" secondItem="Yes-Rw-Moa" secondAttribute="bottom" constant="5" id="R23-6N-PvM"/>
+                    <constraint firstAttribute="bottom" secondItem="FGy-RH-fSN" secondAttribute="bottom" constant="5" id="UEh-Q8-8jg"/>
+                    <constraint firstItem="Yes-Rw-Moa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="qVA-lC-koI"/>
+                    <constraint firstAttribute="trailing" secondItem="Yes-Rw-Moa" secondAttribute="trailing" constant="5" id="rAu-Ow-5G6"/>
+                    <constraint firstItem="FGy-RH-fSN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="60" id="xGC-17-HCv"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="52.799999999999997" y="91.754122938530742"/>
+            <connections>
+                <outlet property="subtitle" destination="FGy-RH-fSN" id="Izy-Mr-Rci"/>
+                <outlet property="title" destination="Yes-Rw-Moa" id="gPx-na-dvE"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="95.802098950524751"/>
         </tableViewCell>
     </objects>
 </document>
