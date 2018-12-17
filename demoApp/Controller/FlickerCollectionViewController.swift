@@ -7,16 +7,45 @@
 //
 
 import UIKit
+import Moya
 
 private let reuseIdentifier = "flickrCell"
 
 class FlickerCollectionViewController: UICollectionViewController {
     
+    var userProvider = MoyaProvider<Service>()
+    var photos = [FlickrPhoto]()
+    var photUrl = [String]()
+    
     override func viewDidLoad() {
        
         setupNavBar()
         setupCollectionView()
-
+        
+        userProvider.request(.flickrFetch, completion: { (result) in
+            
+            switch result {
+                
+            case .success(let response) :
+                
+             let flickrPhoto = try! JSONDecoder().decode(FlickrPhoto.self, from: response.data)
+             
+             self.photos = [flickrPhoto]
+            
+             let element = self.photos[0]
+             
+             for item in element.photos.photo {
+                
+                let url = "https://farm\(item.farm).staticflickr.com/\(item.server)/\(item.id)_\(item.secret).jpg"
+                
+                self.photUrl.append(url)
+            }
+                
+                
+            case.failure(let error) :
+                print(error)
+            }
+        })
     }
     
     fileprivate func setupNavBar() {

@@ -24,11 +24,11 @@ class UserPostViewController : UITableViewController {
         setupTableView()
         
         userProvider.request(.fetchPost, completion: { (result) in
-            
+  
             switch result {
                 
             case .success(let response) :
-                
+  
                 let post = try! JSONDecoder().decode([Post].self , from : response.data)
                 self.posts = post
                 

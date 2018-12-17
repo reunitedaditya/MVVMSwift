@@ -34,6 +34,7 @@
 		F80320B921C6880C0055A975 /* TechCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320B721C6880C0055A975 /* TechCellTableViewCell.swift */; };
 		F80320BA21C6880C0055A975 /* TechCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80320B821C6880C0055A975 /* TechCellTableViewCell.xib */; };
 		F80320BC21C6EC660055A975 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320BB21C6EC660055A975 /* User.swift */; };
+		F80320BE21C6F36A0055A975 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320BD21C6F36A0055A975 /* FlickrPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		F80320B721C6880C0055A975 /* TechCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechCellTableViewCell.swift; sourceTree = "<group>"; };
 		F80320B821C6880C0055A975 /* TechCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TechCellTableViewCell.xib; sourceTree = "<group>"; };
 		F80320BB21C6EC660055A975 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F80320BD21C6F36A0055A975 /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			children = (
 				F803209521C674700055A975 /* Post.swift */,
 				F80320BB21C6EC660055A975 /* User.swift */,
+				F80320BD21C6F36A0055A975 /* FlickrPhoto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F803209621C674700055A975 /* Post.swift in Sources */,
+				F80320BE21C6F36A0055A975 /* FlickrPhoto.swift in Sources */,
 				F803206221C536020055A975 /* ViewController.swift in Sources */,
 				F80320A421C67DA20055A975 /* UserDetailViewController.swift in Sources */,
 				F80320AB21C681500055A975 /* FlickerCollectionViewController.swift in Sources */,
