@@ -31,6 +31,8 @@ class FlickerDetailViewController: UIViewController {
         detailImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.png"))
         
        self.view = detailImageView
+        
+       self.navigationItem.largeTitleDisplayMode = .never
     }
 
 }

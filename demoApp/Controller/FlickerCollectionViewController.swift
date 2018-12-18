@@ -32,6 +32,7 @@ class FlickerCollectionViewController: UICollectionViewController {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor.rgb(r: 50, g: 199, b: 242)
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
     }
     
     fileprivate func setupCollectionView(){
