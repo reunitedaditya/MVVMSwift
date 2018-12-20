@@ -27,7 +27,7 @@ extension Service : TargetType {
         
         case .flickrFetch :
             
-           return URL(string: "https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=061cc6056d458eb0743cc1e1c88aa664&format=json&nojsoncallback=1&api_sig=a081cd775caa26bd0b92f423a5e51882")!
+           return URL(string: "https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=352b0f7c9fffcc0b14abbb602403cd12&format=json&nojsoncallback=1&api_sig=cf97fd44f3ade525cce0c086125be306")!
         }
     }
     
